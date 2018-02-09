@@ -20,6 +20,7 @@ public class ChromeTestCase {
 		
 		driver.get("http://www.google.com");
 		
+		//will close all the windows
 		driver.quit();
 	}
 

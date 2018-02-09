@@ -11,7 +11,8 @@ public class FirefoxTestCase {
 		System.setProperty("webdriver.gecko.driver", "lib/geckodriver.exe");
 		WebDriver driver=new FirefoxDriver();
 		driver.get("http://www.google.com");
-		driver.quit();
+		//will close the current window
+		driver.close();
 
 	}
 
