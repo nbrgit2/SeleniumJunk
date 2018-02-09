@@ -4,11 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class BrowserCommands {
+public class NavigationCommands {
 
 	public static void main(String[] args) {
 		
-       System.setProperty("webdriver.chrome.driver", "lib/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "lib/chromedriver.exe");
 		
 		ChromeOptions options=new ChromeOptions();
 		
@@ -22,14 +22,16 @@ public class BrowserCommands {
 		
 		driver.manage().window().maximize();
 		
-		System.out.println(driver.getTitle());
+		driver.navigate().to("http://www.DemoQA.com");
 		
-		System.out.println(driver.getCurrentUrl());
+		driver.navigate().back();
 		
-		driver.getPageSource();
+		driver.navigate().forward();
 		
-		driver.quit();//or driver.close()
+		driver.navigate().refresh();
 		
+		driver.quit();
+
 	}
 
 }
